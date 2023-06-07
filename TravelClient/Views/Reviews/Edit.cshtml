@@ -1,0 +1,43 @@
+@{
+  ViewData["Title"] = "Edit Review";
+}
+
+@model TravelClient.Models.Review
+
+<h4>Edit this review:</h4>
+<h6>@Html.DisplayFor(model => model.Destination)</h6>
+<br>
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ReviewId)
+
+  @Html.LabelFor(model => model.Destination)
+  @Html.TextBoxFor(model => model.Destination, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.Country)
+  @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.City)
+  @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.Address)
+  @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.UserName)
+  @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.Rating)
+  @Html.TextBoxFor(model => model.Rating, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+  <br>
+  @Html.LabelFor(model => model.Date)
+  @Html.EditorFor(model => model.Date)
+  <br>
+  <br>
+  <input type="submit" value="Save" class="btn btn-primary"/>
+}
+
+<br>
+<p>@Html.ActionLink("Back to all reviews", "Index")</p>

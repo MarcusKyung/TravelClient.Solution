@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+<h1>All Travel Reviews:</h1>
+
+<p>@Html.ActionLink("Add a new review", "Create")</p>
+
+<ol>
+@foreach (Review review in Model)
+{
+  <li><strong>@review.Destination</strong> the @review.Country, @review.City | <a href="/Reviews/Details/@(review.ReviewId)">View Details</a></li>
+}
+</ol>
