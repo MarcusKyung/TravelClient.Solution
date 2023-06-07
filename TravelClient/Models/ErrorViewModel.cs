@@ -1,3 +1,5 @@
+#nullable enable
+
 namespace TravelClient.Models;
 
 public class ErrorViewModel
