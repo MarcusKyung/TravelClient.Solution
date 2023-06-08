@@ -12,45 +12,6 @@ body {
   padding: 20px;
 }
 
-.navbar {
-  margin-bottom: 20px;
-  background-color: #f8f9fa;
-}
-
-.navbar .nav-item {
-  list-style-type: none;
-}
-
-.navbar a {
-  color: #212529;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #1b6ec2;
-  color: #fff;
-}
-
-.navbar-brand {
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
-
-/* a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-} */
-
-a {
-  color: #0077cc;
-}
-
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -61,12 +22,6 @@ a {
   color: #fff;
   background-color: #1861ac;
   border-color: #1764b1;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
 }
 
 .border-top {
@@ -101,9 +56,4 @@ button.accept-policy {
 
 a, .btn-primary {
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
 }
