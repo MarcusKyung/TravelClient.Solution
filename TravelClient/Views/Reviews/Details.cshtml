@@ -2,18 +2,23 @@
   ViewData["Title"] = $"Details for {Model.Destination}";
 }
 
-<h1>All About @Model.Destination</h1>
-<hr>
-<p>Country: @Model.Country</p>
-<p>City: @Model.City</p>
-<p>Address: @Model.Address</p>
-<p>Rating: @Model.Rating</p>
-<p>Description: @Model.Description</p>
-<hr>
-<p>Review Name: @Model.UserName</p>
-<p>Review Post Date: @Model.Date</p>
+<div class="container">
+    <h1 class="my-4">All About @Model.Destination</h1>
 
-<br>
-<p>@Html.ActionLink("Return to all reviews", "Index")</p>
-<p>@Html.ActionLink("Edit Review", "Edit", new { id = @Model.ReviewId })</p>
-<p>@Html.ActionLink("Delete Review", "Delete", new { id = @Model.ReviewId })</p>
+    <div class="card my-4">
+        <div class="card-body">
+            <p class="card-text"><strong>Country:</strong> @Model.Country</p>
+            <p class="card-text"><strong>City:</strong> @Model.City</p>
+            <p class="card-text"><strong>Address:</strong> @Model.Address</p>
+            <p class="card-text"><strong>Rating:</strong> @Model.Rating</p>
+            <p class="card-text"><strong>Description:</strong> @Model.Description</p>
+            <hr>
+            <p class="card-text"><strong>Review Name:</strong> @Model.UserName</p>
+            <p class="card-text"><strong>Review Post Date:</strong> @Model.Date</p>
+        </div>
+    </div>
+
+    <p>@Html.ActionLink("Return to all reviews", "Index", null, new { @class = "btn btn-primary" })</p>
+    <p>@Html.ActionLink("Edit Review", "Edit", new { id = @Model.ReviewId }, new { @class = "btn btn-warning" })</p>
+    <p>@Html.ActionLink("Delete Review", "Delete", new { id = @Model.ReviewId }, new { @class = "btn btn-danger" })</p>
+</div>
