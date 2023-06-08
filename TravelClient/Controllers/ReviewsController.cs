@@ -11,6 +11,26 @@ public class ReviewsController : Controller
     return View(reviews);
   }
 
+  //pagination below
+  public IActionResult Page1()
+  {
+      List<Review> reviews = Review.GetPages(1,5);
+      return View(reviews);
+  }
+
+  public IActionResult Page2()
+  {
+      List<Review> reviews = Review.GetPages(2,5);
+      return View(reviews);
+  }
+
+  public IActionResult Page3()
+  {
+      List<Review> reviews = Review.GetPages(3,5);
+      return View(reviews);
+  }
+  //end pagination
+
   public IActionResult Details(int id)
   {
     Review review = Review.GetDetails(id);

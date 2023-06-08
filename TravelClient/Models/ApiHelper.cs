@@ -13,6 +13,16 @@ namespace TravelClient.Models
       return response.Content;
     }
 
+    //trying pagination below
+    public static async Task<string> GetPage(int pageNumber, int pageSize)
+    {
+      RestClient client = new RestClient("http://localhost:5000/");
+      RestRequest request = new RestRequest($"api/v2/reviews?pageNumber={pageNumber}&pageSize={pageSize}", Method.Get);
+      RestResponse response = await client.GetAsync(request);
+      return response.Content;
+    }
+    //end pagination
+
     public static async Task<string> Get(int id)
     {
       RestClient client = new RestClient("http://localhost:5000/");

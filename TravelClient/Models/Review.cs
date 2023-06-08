@@ -33,6 +33,19 @@ namespace TravelClient.Models
       return reviewList;
     }
 
+    //pagination below
+    public static List<Review> GetPages(int pageNumber, int pageSize)
+    {
+      var apiCallTask = ApiHelper.GetPage(pageNumber, pageSize);
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Review> reviewList = JsonConvert.DeserializeObject<List<Review>>(jsonResponse.ToString());
+
+      return reviewList;
+    }
+    //end pagination
+
     public static Review GetDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);
